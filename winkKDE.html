@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Welcome to Wink!</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <style>
+  body {
+      font: 400 15px Lato, sans-serif;
+      line-height: 1.8;
+      color: #00004d;
+  }
+  h2 {
+      font-size: 24px;
+      text-transform: uppercase;
+      color: #00004d;
+      font-weight: 600;
+      margin-bottom: 30px;
+	  
+  }
+  h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      color: #303030;
+      font-weight: 400;
+      margin-bottom: 30px;
+  }
+  .jumbotron {
+      background-color: #ffffff;
+      color: #000033;/*로고 밑 글씨*/
+      padding: 100px 25px;
+      font-family: Montserrat, sans-serif;
+  }
+  .container-fluid {
+      padding: 60px 50px;
+	  background-color: #ddddee;/*색 바꾸기*/
+  }
+  .bg-grey {
+      background-color: #f6f6f6;/*색 바꾸기*/
+  }
+  .carousel-control.right, .carousel-control.left {
+      background-image:url("http://super887.cafe24.com/Dani/winkKDE.html/index.php/character_2.jpg");
+	  background-repeat: no-repeat;
+	  background-size: 200px;
+      color: #000033;
+	  
+  }
+  .carousel-indicators li {
+      border-color: #0000e6;
+  }
+  .carousel-indicators li.active {
+      background-color: #000033;
+  }
+  .item h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      font-weight: 400;
+      font-style: italic;
+      margin: 70px 0;
+  }
+  .item span {
+      font-style: normal;
+  }
+  .panel {
+      border: 1px solid #000033;
+      border-radius:0 !important;
+      transition: box-shadow 0.5s;
+  }
+  .panel:hover {
+      box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+  }
+  .panel-footer .btn:hover {
+      border: 1px solid #0000e6;
+      background-color: #fff !important;
+      color: #0000e6;
+  }
+  .panel-heading {
+      color: #fff !important;
+      background-color: #0000e6 !important;
+      padding: 25px;
+      border-bottom: 1px solid transparent;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+  }
+  .panel-footer {
+      background-color: white !important;
+  }
+  .panel-footer h3 {
+      font-size: 32px;
+  }
+  .panel-footer h4 {
+      color: #aaa;
+      font-size: 14px;
+  }
+  .panel-footer .btn {
+      margin: 15px 0;
+      background-color: #000033;
+      color: #fff;
+  }
+  .navbar {
+      margin-bottom: 0;
+      background-color: #000033;/*맨 위*/
+      z-index: 99;
+      border: 0;
+      font-size: 12px !important;
+      line-height: 1.42857143 !important;
+      letter-spacing: 4px;
+      border-radius: 0;
+      font-family: Montserrat, sans-serif;
+  }
+  .navbar li a, .navbar .navbar-brand {
+      color: #fff !important;
+	  
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+      color: #000033 !important;
+      background-color: #fff !important;
+  }
+  .navbar-default .navbar-toggle {
+      border-color: transparent;
+      color: #fff !important;
+  }
+  footer {
+            background-color: black;
+            color: white;
+            padding: 20px 0px 15px 0px;
+            overflow-x: hidden;
+        }
+
+        footer li{
+            display: inline;
+            margin: 10px 20px 10px 0px;
+        }
+
+        footer li:hover{
+            color:gainsboro;
+        }
+
+  .slideanim {visibility:hidden;}
+  .slide {
+      animation-name: slide;
+      -webkit-animation-name: slide;
+      animation-duration: 1s;
+      -webkit-animation-duration: 1s;
+      visibility: visible;
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+        width: 100%;
+        margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+        font-size: 150px;
+    }
+  }
+  </style>
+</head>
+	
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#myPage">Home</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#intro">Intro</a></li>
+        <li><a href="#portfolio">PORTFOLIO</a></li>
+        <li><a href="#ours">OURS</a></li>
+        <li><a href="#board">BOARD</a></li>
+		  <?
+                    session_start();
+                    if($_SESSION["id"])
+                    {
+                        ?>
+		  <li><a href="./mypage.php"> My Profile</a></li>
+                            <li><a href="#"><?= $_SESSION["nick"] ?>님 환영합니다. <span class="glyphicon glyphicon-log-out" onclick="location.href='logout.php'" ></span></a></li>
+                    <?} else {?>
+          <li><a href="#" data-toggle="modal" data-target="#myModal_SignUp"><span class="glyphicon glyphicon-user"  data-toggle="modal" data-target="#myModal_SignUp"></span> Sign Up</a></li>
+                            <li><a href="#" data-toggle="modal" data-target="#myModal_Login"><span class="glyphicon glyphicon-log-in" data-toggle="modal" data-target="#myModal_Login"></span> Login</a></li>
+		   <?}?>
+                                    
+      </ul>
+    </div>
+  </div>
+</nav>
+	 
+
+<!-- Modal -->
+<div class="modal fade" id="myModal_SignUp" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Sign up</h4>
+            </div>
+            <div class="modal-body">
+                <form method="post" onsubmit="return register();">
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" id="inputEmail"  class="form-control" placeholder="Enter email">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Nickname:</label>
+                        <input type="text" name="name" id="inputNickname" class="form-control" placeholder="Enter nickname">
+                    </div>
+                    <div class="form-group">
+                        <label for="pwd">Password:</label>
+                        <input type="password"  name="pass" id="inputPass" class="form-control"  placeholder="Enter password again">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pwd">Re Password:</label>
+                        <input type="password"  name="repass" id="inputRepass" class="form-control"  placeholder="Enter password">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pwd">Company:</label>
+                        <input type="text" name="company" id="inputCompany"  name="repass"  class="form-control"  placeholder="Enter company">
+                    </div>
+					</form>
+            </div>
+				
+				<div class="modal-footer">
+					<button type="submit" class="btn btn-default">Submit</button>
+					
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="modal fade" id="myModal_Login" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Log in</h4>
+            </div>
+            <div class="modal-body">
+                <form method="post" onsubmit="return login();">
+
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" name="loginid" id="email" class="form-control" placeholder="Enter email">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pwd">Password:</label>
+                        <input type="password" name="loginpwd" id="pwd" class="form-control" placeholder="Enter password">
+                    </div>
+
+				</form>
+            </div>
+            <div class="modal-footer">
+				<button type="submit" class="btn btn-default">Enter</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+<div class="jumbotron text-center">
+  <img src="http://super887.cafe24.com/Dani/winkimage.png" width="600px" height="400px">
+  <p>We belong to Computer Science in Kookmin Univ. </p>
+  <form class="form-inline">
+    <input type="email" class="form-control" size="50" placeholder="Email Address" required>
+    <button type="button" class="btn btn-danger">Subscribe</button>
+  </form>
+</div>
+
+<div id="intro" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8">
+      <h2>About</h2>
+	WINK는 많은 것을 합니다. 웹홈페이지가 필요한 국민대 부속기관 이라면 WINK는 언제든지 달려갑니다. 다만 독수리들의 활동비를 주십시오. 자세한 사항은 아래 CONTACT US를 통해 언제든지 문의 하실 수 있습니다.
+    </div>
+  </div>
+</div>
+<br>
+<div id="portfolio" class="container-fluid">
+  <h2>Portfolio</h2>
+	<strong style="color:black;">WINK의 시작은 한광수 교수님과 이경용 교수님으로부터 시작 됐습니다. 2016년 국민대학교 컴퓨터공학과 캡스톤디자인 '100조'의 멤버였던 김현우 김경동 김수연 김형준 박세희 황주현 총 6명의 독수리가 그 뒤를 이어 WINK를 만들었습니다.</strong>
+	
+	<p style="color:black;"><br>WINK는 100조의 캡스톤디자인 주제였던 오픈소스 디자인에서 시작 됩니다. WINK의 모체였던 100조는 여러가지 기술을 통해 오픈소스 디자인 홈페이지를 완벽하게 구현하였고 그 파급력으로 수 많은 독수리형제들이 모여 웹개발동아리가 되었습니다.</p>
+	
+	<strong style="color:black;">WINK는 수 많은 독수리가 모여 모체였던 100조와는 완전히 분리, 독립된 단체를 이루었습니다. 그렇다면 WINK는 지금 무엇을 할 까요?</strong>
+	
+	<p style="color:black;"><br>WINK는 많은 것을 합니다. 웹홈페이지가 필요한 국민대 부속기관 이라면 WINK는 언제든지 달려갑니다. 다만 독수리들의 활동비를 주십시오. 자세한 사항은 아래 CONTACT US를 통해 언제든지 문의 하실 수 있습니다.</p>
+
+
+</div>
+<br>
+<div id="ours" class="container-fluid text-center bg-grey">
+  <h1>Ours</h1><br>
+  <h4>Kookmin Univ. Computer Science <br> Web Programming Club</h4>
+  <div class="row text-center slideanim">
+	<h2>What are we doing?</h2>
+
+	<div id="imageFlow" class="carousel slide" data-ride="carousel">
+		<!-- 이미지 보여지는 갯수 -->
+		<ol class="carousel-indicators">
+		  <li data-target="#imageFlow" data-slide-to="0" class="active"></li>
+		  <li data-target="#imageFlow" data-slide-to="1"></li>
+		  <li data-target="#imageFlow" data-slide-to="2"></li>
+		</ol>
+		<!-- 이미지 넣으면됨 -->
+		<div class="carousel-inner" role="listbox">
+		  <div class="item active">
+			<p style="text-align:center;">
+				<img src="http://super887.cafe24.com/Dani/dani.jpeg" width="300" height="300">
+			</p>
+		  </div>
+		  <div class="item">
+			<p style="text-align:center;">
+				<img src="http://super887.cafe24.com/Dani/dani.jpeg" width="300" height="300">
+			</p>
+		  </div>
+		  <div class="item">
+			<p style="text-align:center;">
+				<img src="http://super887.cafe24.com/Dani/dani.jpeg" width="300" height="300">
+			</p>
+		  </div>
+		</div>
+		<!-- 이미지 슬라이딩 -->
+		<a class="left carousel-control" href="#imageFlow" role="button" data-slide="prev">
+		  <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+		  <span class="sr-only">Previous</span>
+		</a>
+		<a class="right carousel-control" href="#imageFlow" role="button" data-slide="next">
+		  <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+		  <span class="sr-only">Next</span>
+		</a>
+	</div>
+  </div>
+</div><br>
+
+<div id="board" class="container-fluid">
+  <div class="text-center">
+    <h2>Board</h2>
+  </div>
+
+  <div class="row slideanim">
+	<div id="notice" class="col-sm-6">
+		<h4>공지사항</h4>
+
+		<!-- GNU보드로 넣을 수 있나 찾아보기 다음은 그냥 샘플 -->
+		<a href="#" style="color:black; float:right;">More...</a>
+		<table class="table table-hover">
+			<thead>
+			  <tr>
+				<th>제목</th>
+				<th>날짜</th>
+			  </tr>
+			</thead>
+			<tbody>
+			  <tr>
+				<td><a href="#" style="color:black;">CRC 홈페이지 제작 안내 <span class="badge">5</span></a></td>
+				<td>2016-06-17</td>
+			  </tr>
+			  <tr>
+				<td><a href="#" style="color:black;">Infusion 홈페이지 제작 취소 안내 <span class="badge">3</span></a></td>
+				<td>2016-06-10</td>
+			  </tr>
+			  <tr>
+				<td><a href="#" style="color:black;">Wink동아리 신규 회원 모집 안내 <span class="badge">2</span></a></td>
+				<td>2016-06-01</td>
+			  </tr>
+			</tbody>
+		</table>
+   </div>
+
+   <div id="new" class="col-sm-6">
+		<h4>최신글</h4>
+
+		<!-- GNU보드로 넣을 수 있나 찾아보기 다음은 그냥 샘플 -->
+		<table class="table table-hover">
+		<thead>
+		  <tr>
+			<th>제목</th>
+			<th>글쓴이</th>
+			<th>날짜</th>
+		  </tr>
+		</thead>
+		<tbody>
+		  <tr>
+			<td><a href="#" style="color:black;">김경동 천재 <span class="badge">7</span></a></td>
+			<td>김수연</td>
+			<td>2016-06-20</td>
+		  </tr>
+		  <tr>
+			<td><a href="#" style="color:black;">김수연 바보 <span class="badge">4</span></a></td>
+			<td>김경동</td>
+			<td>2016-06-17</td>
+		  </tr>
+		  <tr>
+			<td><a href="#" style="color:black;">김다은 여신 <span class="badge">99</span></a></td>
+			<td>김다은</td>
+			<td>2016-06-12</td>
+		  </tr>
+		  <tr>
+			<td><a href="#" style="color:black;">Wink가 뭐하는거야? <span class="badge">1</span></a></td>
+			<td>한광수</td>
+			<td>2016-06-10</td>
+		  </tr>
+		  <tr>
+			<td><a href="#" style="color:black;">신규 회원 모집 아직도하냐? <span class="badge">2</span></a></td>
+			<td>김현우</td>
+			<td>2016-06-06</td>
+		  </tr>
+		  <tr>
+			<td><a href="#" style="color:black;">Wink라니 <span class="badge">4</span></a></td>
+			<td>김형준</td>
+			<td>2016-06-04</td>
+		  </tr>
+		  <tr>
+			<td><a href="#" style="color:black;">나는 바보다 <span class="badge">70</span></a></td>
+			<td>이주형</td>
+			<td>2016-06-01</td>
+		  </tr>
+		</tbody>
+		</table>
+	</div>
+  </div>  
+</div>
+<!--footer-->
+<footer>
+        <div class="row">
+            <ul>
+                <li>ABOUT</li>
+                <li>BLOG</li>
+                <li>FORUMS</li>
+                <li>API</li>
+                <li>ADVERTISE</li>
+                <li>HELP</li>
+                <li>TERMS</li>
+                <li>PRIVACY</li>
+            </ul>
+        </div>
+        <div class="row" style="margin-left:20px;">
+            <div style="float:left">
+                <img src="http://super887.cafe24.com/Dani/winklogo.jpg" width="30px">
+            </div>
+            <div>
+                <p style="color:darkgray;font-size:6px;margin-left:40px;">© 2010-2016 trakt, inc. All rights reserved.<br>Hand crafted in San Diego and the Bay Area.</p>
+            </div>
+        </div>
+
+
+    </footer>
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
+
+</body>
+</html>
+
