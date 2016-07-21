@@ -199,29 +199,26 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#myPage">Home</a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#intro">Intro</a></li>
-        <li><a href="#portfolio">PORTFOLIO</a></li>
-        <li><a href="#ours">OURS</a></li>
-        <li><a href="#board">BOARD</a></li>
-		  <?
-                    session_start();
-                    if($_SESSION["id"])
-                    {
-                        ?>
-		  <li><a href="./mypage.php"> My Profile</a></li>
-                            <li><a href="#"><?= $_SESSION["nick"] ?>님 환영합니다. <span class="glyphicon glyphicon-log-out" onclick="location.href='logout.php'" ></span></a></li>
-                    <?} else {?>
-          <li><a href="#" data-toggle="modal" data-target="#myModal_SignUp"><span class="glyphicon glyphicon-user"  data-toggle="modal" data-target="#myModal_SignUp"></span> Sign Up</a></li>
-                            <li><a href="#" data-toggle="modal" data-target="#myModal_Login"><span class="glyphicon glyphicon-log-in" data-toggle="modal" data-target="#myModal_Login"></span> Login</a></li>
-		   <?}?>
-                                    
-      </ul>
-    </div>
-  </div>
+		<a href="./index.php"></a>
+		<a class="navbar-brand" href="#myPage">Home</a>
+	  </div>
+	  
+	  
+	  
+	  <div>
+		  <div class="collapse navbar-collapse" id="myNavbar">
+			  <ul class="nav navbar-nav navbar-right">
+				  <li><a href="#intro">Intro</a></li>
+				  <li><a href="#portfolio">PORTFOLIO</a></li>
+				  <li><a href="#ours">OURS</a></li>
+				  <li><a href="#board">BOARD</a></li>
+
+				  <li><a href="#" data-toggle="modal" data-target="#myModal_SignUp"><span class="glyphicon glyphicon-user"  data-toggle="modal" data-target="#myModal_SignUp"></span> Sign Up</a></li>
+				  <li><a href="#" data-toggle="modal" data-target="#myModal_Login"><span class="glyphicon glyphicon-log-in" data-toggle="modal" data-target="#myModal_Login"></span> Login</a></li>
+			  </ul>
+		  </div>
+	  </div>
+	</div>
 </nav>
 	 
 
